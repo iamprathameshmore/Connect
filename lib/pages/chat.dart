@@ -1,5 +1,3 @@
-import 'package:Connect/components/header.dart';
-import 'package:Connect/model/getip.dart';
 import 'package:Connect/pages/home.dart';
 import 'package:Connect/utils/info.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +23,7 @@ class _ChatState extends State<Chat> {
             fontWeight: FontWeight.bold),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 10),
+            margin: const EdgeInsets.only(right: 10),
             child: InkWell(
               borderRadius: BorderRadius.circular(50),
               highlightColor: Colors.white,
@@ -38,7 +36,7 @@ class _ChatState extends State<Chat> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(50),
                       border: Border.all(width: 1, color: Colors.deepOrange)),
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     // radius: 10, // Image radius
                     backgroundColor: Colors.amber,
                     backgroundImage: NetworkImage(
@@ -108,14 +106,14 @@ class _ChatState extends State<Chat> {
                                           Navigator.pushAndRemoveUntil(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (_) => Home()),
+                                                  builder: (_) => const Home()),
                                               (route) => false)
                                         },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.arrow_back,
                                       color: Colors.black,
                                     )),
-                                Text(
+                                const Text(
                                   '192.168.1.0',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
@@ -125,10 +123,10 @@ class _ChatState extends State<Chat> {
                                           Navigator.pushAndRemoveUntil(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (_) => Info()),
+                                                  builder: (_) => const Info()),
                                               (route) => false)
                                         },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.account_tree_rounded,
                                       color: Colors.black,
                                     )),
@@ -143,8 +141,8 @@ class _ChatState extends State<Chat> {
                             size: 200,
                             // You can include embeddedImageStyle Property if you
                             //wanna embed an image from your Asset folder
-                            embeddedImageStyle:
-                                QrEmbeddedImageStyle(size: Size(100, 100)),
+                            embeddedImageStyle: const QrEmbeddedImageStyle(
+                                size: Size(100, 100)),
                           ),
                         ),
                         // const Text('Modal BottomSheet'),
@@ -163,7 +161,7 @@ class _ChatState extends State<Chat> {
                               decoration: BoxDecoration(
                                   color: Colors.grey.shade900,
                                   borderRadius: BorderRadius.circular(5)),
-                              child: Text(
+                              child: const Text(
                                 'R E C O N N E C T',
                                 style: TextStyle(
                                     color: Colors.white,
@@ -180,8 +178,8 @@ class _ChatState extends State<Chat> {
               },
             );
           },
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               'C O N N E C T',
               style: TextStyle(fontSize: 25, color: Colors.deepOrange),
@@ -193,74 +191,73 @@ class _ChatState extends State<Chat> {
       backgroundColor: Colors.grey.shade900,
       body: Container(
         // height: double.infinity,
-        margin: EdgeInsets.only(bottom: 10),
+        margin: const EdgeInsets.only(bottom: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text('helo'),
-            Container(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 5),
-                child: Container(
-                  height: 60,
-                  width: double.infinity,
-                  child: TextFormField(
-                    cursorErrorColor: Colors.red,
+            const Text('helo'),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+              child: SizedBox(
+                height: 60,
+                width: double.infinity,
+                child: TextFormField(
+                  cursorErrorColor: Colors.red,
 
-                    // style: TextStyle(color: Colors.white),
-                    minLines: null,
-                    maxLines: null,
-                    expands: true,
-                    cursorColor: Colors.white,
-                    decoration: InputDecoration(
-                        // focusColor: Colors.amber,
-                        fillColor: Colors.orange.shade100.withOpacity(0.9),
-                        filled: true,
-                        prefixIcon: Container(
-                          height: 50,
-                          width: 50,
-                          margin: EdgeInsets.only(right: 3, left: 5),
-                          decoration: BoxDecoration(
-                              // color: Colors.deepOrange,
-                              borderRadius: BorderRadius.circular(50)),
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.add_circle,
-                              size: 30,
-                            ),
-                            onPressed: () {},
+                  // style: TextStyle(color: Colors.white),
+                  minLines: null,
+                  maxLines: null,
+                  expands: true,
+                  cursorColor: Colors.white,
+                  decoration: InputDecoration(
+                      // focusColor: Colors.amber,
+                      fillColor: Colors.orange.shade100.withOpacity(0.9),
+                      filled: true,
+                      prefixIcon: Container(
+                        height: 50,
+                        width: 50,
+                        margin: const EdgeInsets.only(right: 3, left: 5),
+                        decoration: BoxDecoration(
+                            // color: Colors.deepOrange,
+                            borderRadius: BorderRadius.circular(50)),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.add_circle,
+                            size: 30,
                           ),
+                          onPressed: () {},
                         ),
-                        suffixIcon: Container(
-                          height: 50,
-                          width: 50,
-                          margin: EdgeInsets.only(right: 5, left: 3),
-                          decoration: BoxDecoration(
-                              color: Colors.deepOrange,
-                              borderRadius: BorderRadius.circular(50)),
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.sensors_rounded,
-                            ),
-                            onPressed: () {},
+                      ),
+                      suffixIcon: Container(
+                        height: 50,
+                        width: 50,
+                        margin: const EdgeInsets.only(right: 5, left: 3),
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange,
+                            borderRadius: BorderRadius.circular(50)),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.sensors_rounded,
                           ),
+                          onPressed: () {},
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Color(0xFF000000)),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        enabled: true,
-                        border: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Color(0xFF000000)),
-                          borderRadius: BorderRadius.circular(50),
-                        )),
-                  ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            width: 1, color: Color(0xFF000000)),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      enabled: true,
+                      border: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            width: 1, color: Color(0xFF000000)),
+                        borderRadius: BorderRadius.circular(50),
+                      )),
                 ),
               ),
             )
@@ -270,7 +267,7 @@ class _ChatState extends State<Chat> {
       bottomNavigationBar: Container(
         height: 20,
         alignment: Alignment.center,
-        margin: EdgeInsets.only(bottom: 10),
+        margin: const EdgeInsets.only(bottom: 10),
         color: Colors.grey.shade900,
         child: Text(
           'Powerd by Bugs and Glitches',

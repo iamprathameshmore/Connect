@@ -1,17 +1,5 @@
-import 'dart:async';
-import 'dart:convert';
-import 'dart:ffi';
-import 'dart:ui';
-
-import 'package:Connect/model/getip.dart';
 import 'package:Connect/pages/chat.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:qr_flutter/qr_flutter.dart';
-import 'package:dart_ipify/dart_ipify.dart';
-import 'package:get_ip_address/get_ip_address.dart';
-import 'package:dotenv/dotenv.dart' show load, env;
-import 'package:http/http.dart' as http;
 import 'package:slider_button/slider_button.dart';
 
 class Home extends StatelessWidget {

@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-
 // To parse this JSON data, do
 //
 //     final welcome = welcomeFromJson(jsonString);

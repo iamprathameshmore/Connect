@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:qr_flutter/src/qr_image_view.dart';
 
 class QRImage extends StatelessWidget {
   const QRImage(this.controller, {super.key});

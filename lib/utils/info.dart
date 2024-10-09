@@ -22,7 +22,7 @@ void main() {
 }
 
 class Info extends StatefulWidget {
-  const Info({Key? key}) : super(key: key);
+  const Info({super.key});
 
   @override
   State<Info> createState() => _MyAppState();
@@ -149,7 +149,6 @@ class _MyAppState extends State<Info> {
 
   Map<String, dynamic> _readWebBrowserInfo(WebBrowserInfo data) {
     return <String, dynamic>{
-      'browserName': describeEnum(data.browserName),
       'appCodeName': data.appCodeName,
       'appName': data.appName,
       'appVersion': data.appVersion,
@@ -222,17 +221,19 @@ class _MyAppState extends State<Info> {
       appBar: AppBar(
         title: Text(
           _getAppBarTitle(),
-          style: TextStyle(color: Colors.deepOrange),
+          style: const TextStyle(color: Colors.deepOrange),
         ),
         centerTitle: true,
         // elevation: 4,
         backgroundColor: Colors.grey.shade900,
         leading: IconButton(
           onPressed: () => {
-            Navigator.pushAndRemoveUntil(context,
-                MaterialPageRoute(builder: (_) => Chat()), (route) => false)
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (_) => const Chat()),
+                (route) => false)
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.deepOrange,
           ),
@@ -249,7 +250,7 @@ class _MyAppState extends State<Info> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.arrow_right_rounded,
                         color: Colors.white,
                       ),
@@ -272,7 +273,7 @@ class _MyAppState extends State<Info> {
                       textAlign: TextAlign.justify,
                       maxLines: 20,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w500),
                     ),
                   ),

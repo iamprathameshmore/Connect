@@ -1,7 +1,3 @@
-import 'package:Connect/components/header.dart';
-import 'package:Connect/components/qrcode.dart';
-import 'package:Connect/model/getip.dart';
-import 'package:Connect/pages/chat.dart';
 import 'package:Connect/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: Home(),
