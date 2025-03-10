@@ -1,5 +1,4 @@
-import 'package:Connect/pages/home.dart';
-import 'package:Connect/utils/info.dart';
+import 'package:connect/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -106,7 +105,7 @@ class _ChatState extends State<Chat> {
                                           Navigator.pushAndRemoveUntil(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (_) => const Home()),
+                                                  builder: (_) => Home()),
                                               (route) => false)
                                         },
                                     icon: const Icon(
@@ -119,13 +118,7 @@ class _ChatState extends State<Chat> {
                                 ),
                                 // Text(''),
                                 IconButton(
-                                    onPressed: () => {
-                                          Navigator.pushAndRemoveUntil(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) => const Info()),
-                                              (route) => false)
-                                        },
+                                    onPressed: () => {},
                                     icon: const Icon(
                                       Icons.account_tree_rounded,
                                       color: Colors.black,
@@ -211,7 +204,7 @@ class _ChatState extends State<Chat> {
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
                       // focusColor: Colors.amber,
-                      fillColor: Colors.orange.shade100.withOpacity(0.9),
+                      fillColor: Colors.orange.shade100,
                       filled: true,
                       prefixIcon: Container(
                         height: 50,

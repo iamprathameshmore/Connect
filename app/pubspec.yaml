@@ -1,4 +1,4 @@
-name: Connect
+name: connect
 description: "Connect with Your Friends."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,9 +40,10 @@ dependencies:
   get_ip_address: ^0.0.6
   dotenv: ^4.2.0
   http: ^1.2.1
-  device_info_plus: ^9.1.2
+  device_info_plus: ^11.3.3
   flutter_swipe_button: ^2.1.1+1
   slider_button: ^2.1.0
+  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -53,7 +54,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

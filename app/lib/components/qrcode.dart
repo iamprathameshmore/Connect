@@ -1,4 +1,4 @@
-import 'package:Connect/components/qrcodeimage.dart';
+import 'package:connect/components/qrcodeimage.dart';
 import 'package:flutter/material.dart';
 
 class GenerateQRCode extends StatefulWidget {

@@ -1,9 +1,9 @@
-import 'package:Connect/pages/chat.dart';
+import 'package:connect/pages/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
 
 class Home extends StatelessWidget {
-  Home({
+  const Home({
     super.key,
   });
 
